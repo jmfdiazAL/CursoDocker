@@ -1,0 +1,7 @@
+docker inspect --format 'La ip es {{.NetworkSettings.Networks.bridge.IPAddress}}' web
+
+docker inspect --format 'Las redirecciones de puertos son {{.NetworkSettings.Ports}}' web
+
+docker inspect --format 'La ip es {{.NetworkSettings.Networks.bridge.IPAddress}}' bbdd
+
+docker inspect --format 'Las redirecciones de puertos son {{.NetworkSettings.Ports}}' bbdd
