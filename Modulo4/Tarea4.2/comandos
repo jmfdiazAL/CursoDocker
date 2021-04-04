@@ -1,0 +1,7 @@
+docker volume create volumen_datos
+
+docker volume create volumen_web
+
+docker run -d --name c1 -p 8181:80 --mount type=volume,src=volumen_web,dst=/var/www/html php:7.4-apache
+
+docker run -d --name c2 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=admin --mount type=volume,src=volumen_web,dst=/var/lib/mysql mariadb
