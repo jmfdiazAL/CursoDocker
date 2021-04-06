@@ -1,0 +1,5 @@
+docker run -it --name tarea62 ubuntu:20.04
+
+docker commit -a "José Manuel Fernández Díaz" -m "Versión con utilidades de red y usuario 'usuario'" -p tarea62 jmfdiazal/a62
+
+docker push jmfdiazal/a62
