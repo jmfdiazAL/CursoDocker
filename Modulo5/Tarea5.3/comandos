@@ -1,0 +1,7 @@
+docker run -dit --name u1 --network red1 --ip 172.28.0.10 --hostname host1 ubuntu:20.04
+docker attach u1
+
+docker run -dit --name u2 --network red2 --hostname host2 ubuntu:20.04
+docker attach u2
+
+docker network connect red2 u1
